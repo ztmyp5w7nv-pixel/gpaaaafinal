@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Gaia Pilates | Muratpaşa, Antalya</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Üst Duyuru Bandı -->
+    <div class="review-ticker">
+        <div class="ticker-track">
+            <div class="ticker-item">
+                <span class="stars">★★★★★</span>
+                <span>Google'da <strong>4.9 / 5</strong> puan ve <strong>79+</strong> gerçek değerlendirme ile Muratpaşa'nın güvendiği adres</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stars">★★★★★</span>
+                <span>"Stüdyonun sakin atmosferi ve eğitmenlerin ilgisi harika, bedenimdeki değişimi hemen hissettim."</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stars">★★★★★</span>
+                <span>"Kişiye özel reformer programlarıyla kısa sürede harika sonuçlar aldım."</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stars">★★★★★</span>
+                <span>Google'da <strong>4.9 / 5</strong> puan ve <strong>79+</strong> gerçek değerlendirme ile Muratpaşa'nın güvendiği adres</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasyon -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <img src="logo.png" alt="Gaia Logo" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border);">
+                <span style="font-weight: 700; color: var(--text-main); font-size: 1.1rem;">Gaia Pilates</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#hizmetler">Stüdyo & Dersler</a>
+                <a href="#randevu">Randevu Al</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+            <a href="#randevu" class="nav-cta">Seans Planla</a>
+        </div>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="badge">Çağlayan, Muratpaşa · Antalya</span>
+            <h1>Bedeninizin Doğal Dengesi ve Gücü</h1>
+            <p>Reformer ve Mat Pilates seanslarımızla merkezinizi güçlendirin, postürünüzü yenileyin ve zihinsel dinginliğe ulaşın.</p>
+            <div class="hero-actions">
+                <a href="#randevu" class="btn-primary">Hemen Randevu Oluştur</a>
+                <a href="tel:05303786540" class="btn-outline">0530 378 65 40</a>
+            </div>
+        </div>
+        <div class="hero-gallery">
+            <div class="gallery-card main-img">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Reformer Pilates">
+            </div>
+            <div class="gallery-card sub-img-1">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Mat Pilates">
+            </div>
+            <div class="gallery-card sub-img-2">
+                <img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=600&q=80" alt="Atmosfer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section id="hizmetler" class="services">
+        <div class="section-title">
+            <h2>Çalışma Alanlarımız</h2>
+            <p>Her seviyeye ve ihtiyaca özel tasarlanmış profesyonel seans seçenekleri</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="Reformer"></div>
+                <div class="card-body">
+                    <h3>Reformer Pilates</h3>
+                    <p>Özel direnç yayları ve aletler eşliğinde omurga sağlığınızı korurken kas uzamasını ve sıkılaşmayı en üst düzeye çıkarın.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=80" alt="Mat"></div>
+                <div class="card-body">
+                    <h3>Mat Pilates</h3>
+                    <p>Kendi vücut ağırlığınızla core bölgenizi merkeze alarak esneklik kazanın, dayanıklılığınızı güvenle artırın.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=700&q=80" alt="Private"></div>
+                <div class="card-body">
+                    <h3>Bireysel & Grup Seçenekleri</h3>
+                    <p>Tamamen size özel bire bir (Private) dersler ya da yüksek enerjili, kontrollü küçük grup alternatifleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Randevu Sistemi -->
+    <section id="randevu" class="booking-section">
+        <div class="booking-wrapper">
+            <div class="booking-info">
+                <h2>Seansınız İçin Yer Ayırın</h2>
+                <p>İstediğiniz tarihi seçerek randevu talebinizi iletin. Ekibimiz sizinle iletişime geçip en uygun seans saatini birlikte netleştirsin.</p>
+                <div class="studio-hours">
+                    <h4>Çalışma Saatlerimiz</h4>
+                    <ul>
+                        <li><span>Pazartesi – Pazar</span> <strong>07:00 – 21:00</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <form id="realBookingForm">
+                    <div class="input-group">
+                        <label for="fullName">Ad Soyad</label>
+                        <input type="text" id="fullName" required placeholder="Adınızı giriniz">
+                    </div>
+                    <div class="input-group">
+                        <label for="userPhone">Telefon Numarası</label>
+                        <input type="tel" id="userPhone" required placeholder="0555 555 55 55">
+                    </div>
+                    <div class="input-group">
+                        <label for="selectedService">Hizmet Türü</label>
+                        <select id="selectedService" required>
+                            <option value="">Seans Seçiniz</option>
+                            <option value="Reformer Pilates">Reformer Pilates</option>
+                            <option value="Mat Pilates">Mat Pilates</option>
+                            <option value="Bireysel (Private) Ders">Bireysel (Private) Ders</option>
+                            <option value="Grup Dersi">Grup Dersi</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="appointmentDate">Talep Edilen Tarih (Gün)</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Randevu Talebini Gönder</button>
+                    <div id="formAlert" class="form-alert">Randevu talebiniz başarıyla alındı! En kısa sürede döneceğiz.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim & Harita -->
+    <section id="iletisim" class="contact-section">
+        <div class="section-title">
+            <h2>Stüdyomuzu Ziyaret Edin</h2>
+            <p>Antalya Muratpaşa'da sakin ve ferah stüdyomuzda sizleri ağırlamaktan mutluluk duyarız.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-details">
+                <div style="display: flex; align-items: center; gap: 1rem; background: var(--card-bg); padding: 1rem; border-radius: 12px; border: 1px solid var(--border);">
+                    <img src="logo.png" alt="Studio Gaia Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent);">
+                    <div>
+                        <h4 style="margin: 0; font-size: 0.95rem;">Studio Gaia Pilates</h4>
+                        <p style="margin: 0; font-size: 0.8rem; opacity: 0.7;">Profesyonel Reformer & Mat Stüdyosu</p>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <h4>Adres</h4>
+                    <p>Çağlayan Mah. Fener Cd. No:42<br>07230 Muratpaşa / Antalya</p>
+                </div>
+                <div class="detail-box">
+                    <h4>İletişim & Sosyal Medya</h4>
+                    <p style="margin-bottom: 0.8rem;">Telefon: <a href="tel:05303786540">0530 378 65 40</a></p>
+                    <div class="social-contact-icons" style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                        <a href="https://instagram.com/studiogaiapilates" target="_blank" title="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #faf8f5; border: 1px solid var(--border); border-radius: 50%; color: var(--primary); text-decoration: none;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="mailto:gaiastudiolara@gmail.com" title="E-posta Gönder" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #faf8f5; border: 1px solid var(--border); border-radius: 50%; color: var(--primary); text-decoration: none;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <h4>Google Değerlendirmesi</h4>
+                    <p>⭐ <strong>4.9 / 5</strong> (79+ Mutlu Danışan Yorumu)</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=36.85522511077655,30.763225389753234&z=16&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Studio Gaia Pilates</h3>
+            <p>Çağlayan, Fener Cd. No:42, Muratpaşa/Antalya · Tel: 0530 378 65 40</p>
+            <p class="copyright">&copy; 2026 Studio Gaia Pilates. Tüm hakları saklıdır.</p>
+            <div class="footer-admin-link">
+                <a href="admin.html">İşletme Paneli Girişi</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

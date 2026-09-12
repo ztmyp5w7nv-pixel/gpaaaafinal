@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İşletme Yönetim Paneli | Studio Gaia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+    <!-- Giriş Ekranı -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <h2>İşletme Girişi</h2>
+            <p>Lütfen stüdyo yönetici bilgilerinizi giriniz.</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="adminEmail">E-posta Adresi</label>
+                    <input type="email" id="adminEmail" required placeholder="gaiastudiolara@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label for="adminPassword">Şifre</label>
+                    <input type="password" id="adminPassword" required placeholder="Şifreniz">
+                </div>
+                <button type="submit" class="submit-btn">Giriş Yap</button>
+                <div id="loginError" class="login-error">Bilgiler hatalı, lütfen tekrar deneyin.</div>
+            </form>
+            <div class="back-home">
+                <a href="index.html">← Ana Siteye Dön</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yönetim Paneli Ekranı -->
+    <div id="adminPanelScreen" class="admin-panel-screen" style="display: none;">
+        <header class="admin-topbar">
+            <div class="topbar-container">
+                <h2>Studio Gaia · Yönetim Paneli</h2>
+                <div class="topbar-actions">
+                    <a href="index.html" class="view-site-btn" target="_blank">Siteyi Görüntüle</a>
+                    <button id="logoutBtn" class="logout-btn">Çıkış Yap</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <!-- Sekme Navigasyonu -->
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="pendingTab">Gelen Talepler (<span id="badgePending">0</span>)</button>
+                <button class="tab-btn" data-tab="approvedTab">Onaylanan Seanslar (<span id="badgeApproved">0</span>)</button>
+                <button class="tab-btn" data-tab="rejectedTab">Reddedilenler (<span id="badgeRejected">0</span>)</button>
+            </div>
+
+            <!-- Gelen Talepler Sekmesi -->
+            <div id="pendingTab" class="tab-content active">
+                <div class="admin-container">
+                    <div class="admin-header-bar">
+                        <span>Bekleyen Randevu Talepleri</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Danışan Adı</th>
+                                    <th>Telefon</th>
+                                    <th>Hizmet</th>
+                                    <th>İstenen Tarih</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pendingTableBody">
+                                <tr><td colspan="5" class="empty-text">Bekleyen talep bulunmuyor.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onaylanan Seanslar Sekmesi -->
+            <div id="approvedTab" class="tab-content">
+                <div class="admin-container">
+                    <div class="admin-header-bar">
+                        <span>Onaylanan Seanslar ve Saatler</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Danışan Adı</th>
+                                    <th>Telefon</th>
+                                    <th>Hizmet</th>
+                                    <th>Tarih & Saat</th>
+                                    <th>İşletme Notu</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody id="approvedTableBody">
+                                <tr><td colspan="6" class="empty-text">Onaylanmış seans bulunmuyor.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reddedilenler Sekmesi -->
+            <div id="rejectedTab" class="tab-content">
+                <div class="admin-container">
+                    <div class="admin-header-bar">
+                        <span>Reddedilen Talepler</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Danışan Adı</th>
+                                    <th>Telefon</th>
+                                    <th>Hizmet</th>
+                                    <th>Talep Tarihi</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rejectedTableBody">
+                                <tr><td colspan="5" class="empty-text">Reddedilen talep bulunmuyor.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Onaylama / Saat Seçim Modalı -->
+    <div id="actionModal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <h3>Seans Onayla ve Saat Belirle</h3>
+            <p>Danışanın stüdyoya geleceği saati seçin:</p>
+            <div class="input-group">
+                <label for="modalTimeInput">Seans Saati</label>
+                <input type="time" id="modalTimeInput" value="10:00" required>
+            </div>
+            <div class="input-group">
+                <label for="modalNoteInput">İşletme Notu (Opsiyonel)</label>
+                <input type="text" id="modalNoteInput" placeholder="Örn: Mat 3 numaralı yer ayrıldı">
+            </div>
+            <div id="modalAlert" class="modal-error" style="display:none;">Bu tarih ve saatte zaten kayıtlı bir seans var!</div>
+            <div class="modal-actions">
+                <button id="modalCancelBtn" class="btn-outline-modal">İptal</button>
+                <button id="modalConfirmBtn" class="btn-primary-modal">Onayla</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
